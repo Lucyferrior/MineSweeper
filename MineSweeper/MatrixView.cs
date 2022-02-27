@@ -14,9 +14,7 @@ namespace MineSweeper
     {
         public MatrixView()
         {
-            BackColor = Color.White;
-            this.Size = new Size(250, 250);
-            this.Location = new Point(250, 100);
+            BackColor = Color.Red;
         }
         public void Alignment()
         {
@@ -25,9 +23,9 @@ namespace MineSweeper
 
             int thisSizeX = (btn.Left + btn.Width) * buttonCount;
             int thisSizeY = (btn.Top + btn.Height) * buttonCount;
-            Trace.WriteLine(btn.Location.X + ", " + btn.Width + ", " + buttonCount + " = " + thisSizeX);
-            Trace.WriteLine(btn.Location.Y + ", " + btn.Height + ", " + buttonCount + " = " + thisSizeY);
-
+            //Trace.WriteLine(btn.Location.X + ", " + btn.Width + ", " + buttonCount + " = " + thisSizeX);
+            //Trace.WriteLine(btn.Location.Y + ", " + btn.Height + ", " + buttonCount + " = " + thisSizeY);
+            Trace.WriteLine(thisSizeX);
 
             this.Size = new Size(thisSizeX, thisSizeY);
         }

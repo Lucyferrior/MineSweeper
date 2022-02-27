@@ -74,9 +74,12 @@ namespace MineSweeper
             CreateTable(n);
             CreateMines(mineCount);
             addControls();
+            Trace.WriteLine("table size: " + Size.Width.ToString() + Size.Height.ToString());
+
         }
         private void addControls()
         {
+            Controls.Clear();
             foreach (Box item in boxes)
             {
                 Controls.Add(item);
