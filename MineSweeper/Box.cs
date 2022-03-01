@@ -22,7 +22,7 @@ namespace MineSweeper
     }
     public abstract class Box : Button
     {
-        private Color defaultColor = Color.Silver;
+        public Color defaultColor = Color.Silver;
         public Box()
         {
             Size = new Size(30, 30);
@@ -100,7 +100,6 @@ namespace MineSweeper
                     cell.Top = y * (cell.Height + cellPadding) + tableMargin;
                     cell.Left = x * (cell.Width + cellPadding) + tableMargin;
                     cell.Click += cellClick;
-
                     boxes[x, y] = cell;
                     //Controls.Add(boxes[x, y]);
                 }
@@ -120,7 +119,7 @@ namespace MineSweeper
                 Trace.WriteLine(mine.Location.X);
                 mine.Click += mineClick;
                 mine.MouseDown += MineRightClick;
-                mine.BackColor = Color.Yellow;
+                
                 boxes[x, y] = mine;
                 //Trace.WriteLine(x.ToString() + ", " + y.ToString());
             }
@@ -166,13 +165,13 @@ namespace MineSweeper
                     {
                         count++;
                     }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
-            if(count == mineCount)
-            {
-                return true;
-            }
-            return false;
+            return true;
         }
         public void finishGame()
         {

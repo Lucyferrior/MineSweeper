@@ -14,7 +14,7 @@ namespace MineSweeper
     {
         public MatrixView()
         {
-            BackColor = Color.Red;
+            BackColor = Color.Gray;
         }
         public void Alignment()
         {
