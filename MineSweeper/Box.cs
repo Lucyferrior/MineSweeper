@@ -154,7 +154,7 @@ namespace MineSweeper
             Controls.Clear();
             CreateGame(_n,mineCount);
         }
-        public Boolean isFinished()
+        public Boolean isFinished() //tüm kutular mavi işaretlense de kazanılmış durumu döner bunu düzelt
         {
             int count = 0;
             foreach (Box box in boxes)
